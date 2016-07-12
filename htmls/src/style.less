@@ -1,0 +1,37 @@
+@fontc: #6a6868;
+@bgc: #f6f6f6;
+
+
+html,body{
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica,'PingFangSC-Regular', 'Lantinghei SC', 'Open Sans', 'Arial', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', 'STHeiti', 'WenQuanYi Micro Hei', 'SimSun', 'sans-serif';
+  color:@fontc;
+  background-color: @bgc;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 1.4rem;
+
+  /* 让字体光滑 */ 
+  -webkit-font-smoothing: antialiased;
+  
+  /* webkit 下默认最小字体12px，小于的会自动矫正，*/ 
+  /* 这句是屏蔽这个功效，但chrome新版需要到浏览器里面设置*/ 
+  -webkit-text-size-adjust:none;  
+}
+
+body{
+  perspective: 100rem;
+  -webkit-overflow-scrolling : touch;
+}
+
+*,*::before,*::after{
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+}
+
+
+h1{color:grey;}
+.hello-pack{color:red};
+
