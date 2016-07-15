@@ -23,7 +23,7 @@ var webpackCofig = {
   },
 
   plugins: [
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
   ]
 
 };

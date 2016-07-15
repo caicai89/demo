@@ -10,7 +10,7 @@ html,body{
   padding: 0;
   width: 100%;
   height: 100%;
-  font-size: 1.4rem;
+  font-size: 10px;
 
   /* 让字体光滑 */ 
   -webkit-font-smoothing: antialiased;
@@ -21,6 +21,7 @@ html,body{
 }
 
 body{
+  /* 设置3D 镜头到元素平面的距离 默认所有元素都放z=0 的平面上，设置了perspective 相当于定义立方体到z轴的距离，角度*/ 
   perspective: 100rem;
   -webkit-overflow-scrolling : touch;
 }
@@ -32,6 +33,102 @@ body{
 }
 
 
-h1{color:grey;}
-.hello-pack{color:red};
+h1{color:grey;font-size:2.4rem;}
+.hello-pack{color:red;font-size:1.2rem;};
+
+.nav{
+  list-style:none;
+  margin:0 auto;
+  padding:0;
+  margin-bottom:1rem;
+  background-color:#fff;
+  padding-left: 1rem;
+
+  .nitem{
+    display:inline-block;
+    width:6rem;
+    height:4rem;
+    line-height:4rem;
+    font-size:1.4rem;
+    text-align:center;
+    border-right: 1px solid grey;    
+    cursor: pointer;
+    position:relative;
+  }
+
+  .new::before{
+    content:"";
+    width:1rem;
+    height:1rem;
+    border-radius:50%;
+    background-color:red;
+    position:absolute;
+    right: 0.5rem;
+    top: 0;
+  }  
+
+  .newmsg::before{
+    content: attr(msgcount);
+    width:2rem;
+    height:2rem;
+    line-height:2rem;
+    color:#fff;
+    font-size:1.2rem;
+    border-radius:50%;
+    background-color:red;
+    position:absolute;
+    right: -0.5rem;
+    top: -1rem;   
+  }
+
+  .nitem:active{
+    background-color:grey;    
+    color: #fff;
+  }
+
+  .nitem:last-child{
+    border-right:0;
+  }
+
+}
+
+
+
+.list{
+  list-style: none;
+  margin: 0;
+  padding:0;
+}
+
+.item{
+  height: 4rem;
+  line-height:4rem;
+  width:70%;
+  margin: 0 auto;
+  background-color: #e5e5e5;
+  border-radius: 0.4rem;
+  font-size:1.6rem;
+  position: relative;
+  margin-bottom: 1rem;
+  text-align:center;
+}
+
+.item::before{
+  content:attr(index);
+  width:3rem;
+  height:3rem;
+  line-height: 3rem;
+  text-align: center;
+  border-radius:50%;
+  display: inline-block;
+  background-color: rgba(400,0,0,0.1);
+  left: -3rem;
+  top: 0.5rem;
+  position: absolute;
+}
+
+.item:nth-child(odd){
+  background-color: #fff;
+}
+
 
