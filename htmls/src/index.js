@@ -6,6 +6,7 @@
 
  var navNode = document.createElement('ol');
  navNode.classList.add("nav");
+ navNode.setAttribute("id","nav_list");
 
  for (var i = 1; i < 6; i++) {
  	var nav = document.createElement("li");
@@ -36,4 +37,5 @@
  }
 
  document.body.appendChild(listNode);
+
 
