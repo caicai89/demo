@@ -2,6 +2,9 @@
 
  var node = document.createElement('h1');
  node.innerText = "Hello Word!";
+ var heart = document.createElement('span');
+ heart.setAttribute("class","heart");
+ node.appendChild(heart);
  document.body.appendChild(node);
 
  var navNode = document.createElement('ol');

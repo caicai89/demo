@@ -6,7 +6,8 @@ var production = nodeDev === 'production';
 
 var webpackCofig = {
   entry: {
-  	index: ['./src/index.js']
+  	index: ['./src/index.js'],
+    block: ['./src/block.js']
   },
   output: {
     path: path.resolve(__dirname, 'build/assets/'),
